@@ -1,0 +1,24 @@
+{
+    "name": "ifc-rxjs",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "http-server -p 9999"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "http-server": "^0.9.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/snagar78/interframe-communication-rxjs.git"
+    },
+    "author": "snagar",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/snagar78/interframe-communication-rxjs/issues"
+    },
+    "homepage": "https://github.com/snagar78/interframe-communication-rxjs#readme"
+}

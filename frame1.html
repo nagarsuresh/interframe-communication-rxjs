@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.4.0/Rx.min.js"></script>
+    <script src="ifc.js"></script>
+    <script>
+        function publishEvent() {
+            IFC.next({
+                fname: document.getElementById("firstName").value,
+                lname: document.getElementById("lastName").value
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header">I-Frame - Publishing Events!!!</div>
+        <div class="card-block">
+            <label for="">
+                First Name
+                <input type="text" id="firstName">
+            </label>
+            <label for="">
+                    Last Name
+                    <input type="text" id="lastName">
+                </label>
+        </div>
+        <div class="card-footer">
+            <a href="javascript:publishEvent()" class="btn btn-primary">Publish Event</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.4.0/Rx.min.js"></script>
+    <script src="ifc.js"></script>
+
+    <script>
+            IFC.subscribe((data) => {
+                if(!data) return;
+                console.log("Recevied in frame 2", value);
+                var value = document.getElementById("log").innerHTML;
+                value += "<br/>" + JSON.stringify(data);
+                document.getElementById("log").innerHTML = value;
+            })
+    </script>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header">I-Frame - Receiving Events</div>
+        <div class="card-block">
+            <h6 class="card-title">Received Event Log!</h6>
+            <div id="log"></div>
+        </div>
+    </div>
+</body>
+
+</html>
